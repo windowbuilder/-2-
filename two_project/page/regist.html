@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>注册界面</title>
+		<link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+		<style>
+			.layui-container{
+				width: 420px;
+				height: 380px;
+				min-height: 380px;
+				max-height: 380px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				padding: 20px;
+				z-index: 130;
+				border-radius: 8px;
+				background-color: #fff;
+				box-shadow: 0 3px 18px rgba(100, 0, 0, .5);
+				font-size: 16px;
+			}
+			.layui-form-label{
+				margin-left: 10px;
+			}
+			.p{
+				height: 35px;
+				margin-top: -10px;
+				padding-left:130px;
+				padding-bottom: 5px;
+				font-size: 30px;
+				color: #088259;
+			}
+			.layui-input{
+				border-radius: 5px;
+				width: 300px;
+				height: 40px;
+				font-size: 15px;
+			}
+			.layui-form-item,.d3{
+				margin-left: -40px;
+			}
+			.font-set{
+				font-size: 13px;
+				text-decoration: none; 
+				margin-left: 120px;
+			}
+			a:hover{
+				text-decoration: underline; 
+			}
+			.b2{
+				margin-left: -70px;
+				border-radius: 5px;
+				width: 380px;
+				height: 40px;
+				font-size: 15px;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery.min-2.1.1.js"></script>
+		<script type="text/javascript" src="../layui/layui.js"></script>
+	</head>
+	<body style="width:500px;height:855px;margin:40px auto;
+		background:-webkit-radial-gradient(center,closest-corner,#AEBAF8,#C973FF,#AEBAF8);">
+		<div class="layui-container">
+			<form class="layui-form" action="">
+				<div class="layui-form-mid layui-word-aux">
+					<p class="p">用户注册</p>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">用 &nbsp;户&nbsp;名</label>
+					<div class="layui-input-block">
+						<input type="text" id="username" name="username" placeholder="请输入用户名" autocomplete="off" class="layui-input" />
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">手 &nbsp;机&nbsp;号</label>
+					<div class="layui-input-block">
+						<input type="text" id="username" name="username" placeholder="请输入手机号" autocomplete="off" class="layui-input" />
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">密 &nbsp; &nbsp; &nbsp;&nbsp;码</label>
+					<div class="layui-input-block">
+						<input type="text" name="password" placeholder="请输入密码" autocomplete="off" class="layui-input" />
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">密 &nbsp; &nbsp; &nbsp;&nbsp;码</label>
+					<div class="layui-input-block">
+						<input type="text" name="password" placeholder="请再次输入密码" autocomplete="off" class="layui-input" />
+					</div>
+				</div>
+			</form>
+			<div class="d3">
+				<div class="layui-input-block">
+					<button class="layui-btn b2" onclick="login()">立即注册</button>	     
+				</div>
+				<div style="height: 15px;"></div>
+				<a href="../page/login.html" class="font-set" style="float: left;margin-left: 40px;">已有密码</a>
+			</div>
+		</div>
+	</body>
+</html>

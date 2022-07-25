@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>系统主界面</title>
+		<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css"/>
+		<script type="text/javascript" src="../../js/jquery.min-2.1.1.js"></script>
+		<script type="text/javascript" src="../../layui/layui.js"></script>
+	</head>
+	<body>
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header layui-bg-green">
+				<div class="layui-logo layui-bg-green">B2C购物商城</div>
+				<ul class="layui-nav layui-layout-right">
+					<div class="layui-input-inline">
+						<input type="text" name="name" placeholder="商品名称"
+							autocomplete="off" class="layui-input">
+					</div>
+					<div class="layui-input-inline">
+						<button class="layui-btn layui-btn-normal" style="margin-right: 300px;">查询</button>
+					</div>
+					<li class="layui-nav-item" style="margin-right: 30px;">我的订单</li>
+					<li class="layui-nav-item" style="margin-right: 60px;">购物车</li>
+					<li class="layui-nav-item">用户名：张三</li>
+				</ul>
+			</div>
+			<div class="layui-side layui-bg-cyan">
+				<div class="layui-side-scroll">
+					<ul class="layui-nav layui-nav-tree layui-bg-cyan" lay-filter="test" lay-shrink="all">
+						<li class="layui-nav-item layui-nav-itemed">
+							<a class="" href="javascript:;"><i class="layui-icon">&#xe66f;</i> &nbsp;电器</a>
+							<dl class="layui-nav-child">
+								<dd><a href="../page/admin.html" target="t1">冰箱</a></dd>
+								<dd><a href="../page/admin.html" target="t1">洗衣机</a></dd>
+								<dd><a href="../page/admin.html" target="t1">空调</a></dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a class="" href="javascript:;"><i class="layui-icon">&#xe66e;</i> &nbsp;服装</a>
+							<dl class="layui-nav-child">
+								<dd><a href="../page/shop_num.html" target="t1">女装</a></dd>
+								<dd><a href="../page/admin.html" target="t1">男装</a></dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a class="" href="javascript:;"><i class="layui-icon">&#xe657;</i> &nbsp;生活用品</a>
+							<dl class="layui-nav-child">
+								<dd><a href="../page/shop.html" target="t1">垃圾袋</a></dd>
+								<dd><a href="../page/add_shop.html" target="t1">洗手液</a></dd>
+								<dd><a href="../page/down_shop.html" target="t1">洗洁精</a></dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="layui-body" style="background-color: lavender;">
+				<div style="font-size:0;">
+					<iframe name="t1" frameBorder="0" style="width: 100%;height: 834px;" src="class.html" scrolling="no" id="myiframe">
+						
+					</iframe>
+				</div>
+			</div>
+			<div class="layui-footer" style="text-align: center;">@feiyang</div>
+		</div>
+	</body>
+</html>

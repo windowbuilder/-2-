@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>商品列表界面</title>
+		<link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+		<style>
+			table td{
+				text-align: center;
+			}
+			.layui-table th{
+				text-align: center;
+			}
+			a:hover{
+				text-decoration: underline; 
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery.min-2.1.1.js"></script>
+		<script type="text/javascript" src="../layui/layui.js"></script>
+		<script type="text/javascript" src="../js/project.js" ></script>
+	</head>
+	<body>
+		<div style="width: 97%; margin: 20px auto;">
+			<div class="layui-input-block">
+				<span style="font-size: 25px;font-weight: bold; margin-left: -110px;">查询</span>
+			</div>
+			<form class="layui-form">
+				<div class="layui-form-item">
+					<div class="layui-input-inline">
+						<input type="text" name="name" placeholder="订单号"
+							autocomplete="off" class="layui-input">
+					</div>
+					<div class="layui-input-inline">
+						<select name="institute">
+							<option value="">订单状态</option>
+							<option value="0">选项1</option>
+							<option value="1">选项2</option>
+							<option value="2">选项3</option>
+							<option value="3">选项4</option>
+							<option value="4">选项5</option>
+						</select>
+					</div>
+					<div class="layui-input-inline">
+						<button class="layui-btn">查询</button>
+					</div>
+				</div>
+			</form>
+			<hr class="layui-border-black"/>
+			<div class="layui-input-block">
+				<span style="font-size: 25px;font-weight: bold; margin-left: -110px;">列表</span>
+			</div>
+			<div class="layui-input-inline">
+				<button class="layui-btn submit">一键发货</button>
+			</div>
+			<table class="layui-table" id="tab1" title="订单信息表单">
+				<thead>
+					<tr>
+						<th><input type="checkbox"/></th>
+						<th>订单号</th>
+						<th>用户id</th>
+						<th>用户名</th>
+						<th>交易金额</th>
+						<th>交易时间</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>123456789</td>
+						<td>12</td>
+						<td>张三</td>
+						<td>国际贸易</td>
+						<td>国际贸易</td>
+						<td><a href="../page/detail.html">查看</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>987456123</td>
+						<td>11</td>
+						<td>李四</td>
+						<td>国际贸易</td>
+						<td>国际贸易</td>
+						<td><a href="../page/detail.html">查看</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>369852147</td>
+						<td>1</td>
+						<td>王五</td>
+						<td>国际贸易</td>
+						<td>国际贸易</td>
+						<td><a href="../page/detail.html">查看</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>753421869</td>
+						<td>15</td>
+						<td>马六</td>
+						<td>国际贸易</td>
+						<td>国际贸易</td>
+						<td><a href="../page/detail.html">查看</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>951847623</td>
+						<td>16</td>
+						<td>牛七</td>
+						<td>国际贸易</td>
+						<td>国际贸易</td>
+						<td><a href="../page/detail.html">查看</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<div style="margin: 0 auto;width: 24%;">
+				<div class="layui-input-inline "><button type="button"
+						class="layui-btn layui-btn-primary layui-border-green" id="first">首页</button></div>
+				<div class="layui-input-inline"><button type="button" class="layui-btn" id="previous">上一页</button></div>
+				<a id="text">第1页，共5页</a>
+				<div class="layui-input-inline"><button type="button" class="layui-btn" id="next">下一页</button></div>
+				<div class="layui-input-inline"><button type="button"
+						class="layui-btn layui-btn-primary layui-border-green" id="last">尾页</button></div>
+			</div>
+		</div>
+	</body>
+</html>

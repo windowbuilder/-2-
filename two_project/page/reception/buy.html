@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>支付界面</title>
+		<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css"/>
+		<script type="text/javascript" src="../../js/jquery.min-2.1.1.js"></script>
+		<script type="text/javascript" src="../../layui/layui.js"></script>
+	</head>
+	<body>
+		<div style="width: 86%; margin: 80px auto;">
+			<div style="float: left;">
+				<img src="../../img/1.png" style="width: 200px;height: 160px;"/>
+			</div>
+			<div style="float: left;margin-left: 50px;margin-top: -40px;">
+				<div style="margin: 30px auto;font-size: 16px;">
+					商品名称
+				</div>
+				<div style="margin: 30px auto;font-size: 16px;">
+					单价168元 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;购买数量
+				</div>
+				<div id="dd">
+					<div style="margin: 30px auto;font-size: 23px;color: red;">
+						336
+					</div>
+					<div style="margin: 30px auto;">
+						<button class="layui-btn add">支付</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(".add").on("click",function(){
+			$("#dd").html("<div style='width: 230px;height: 110px;background-color: aquamarine;padding-top:20px'>"+
+				"<div id='zer'><input type='text' name='name' placeholder='请输入支付密码' autocomplete='off' class='layui-input'>"+
+				"<button class='layui-btn layui-btn-black geto' style='margin-top:20px;margin-right: 300px;width: 230px'>支付</button></div></div>");
+			$(".geto").on("click",function(){
+				$("#zer").html("支付成功<button class='layui-btn layui-btn-black gg' style='margin-top:20px;margin-right: 300px;width: 230px'>关闭</button>");
+				$(".gg").on("click",function(){
+					parent.location.href="ordering.html";
+				})
+			})
+		});
+	</script>
+</html>

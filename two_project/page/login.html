@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>商城管理系统登录界面</title>
+		<link rel="stylesheet" type="text/css" href="../layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+		<script type="text/javascript" src="../js/jquery.min-2.1.1.js"></script>
+		<script type="text/javascript" src="../layui/layui.js"></script>
+	</head>
+	<body style="width:500px;height:855px;margin:40px auto;
+		background:-webkit-radial-gradient(#AEBAF8,#C973FF,#AEBAF8);">
+		<div class="layui-container">
+			<form class="layui-form" action="">
+				<div class="layui-form-mid layui-word-aux">
+					<p class="p">用户登录</p>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">用户名</label>
+					<div class="layui-input-block">
+						<input type="text" id="username" name="username" placeholder="请输入用户名" autocomplete="off" class="layui-input" />
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">密 &nbsp; &nbsp;码</label>
+					<div class="layui-input-block">
+						<input type="text" name="password" placeholder="请输入密码" autocomplete="off" class="layui-input" />
+					</div>
+				</div>
+			</form>
+			<div class="b3">
+				<div class="layui-input-block">
+					<button class="layui-btn" onclick="login()">登陆</button>	     
+				</div>
+				<div style="height: 20px;"></div>
+				<a href="../page/forget.html" class="font-set" style="float: left;margin-left: 50px;">忘记密码?</a>
+				<a href="../page/regist.html" class="font-set" style="float: right;">立即注册</a>
+			</div>
+		</div>
+	</body>
+</html>

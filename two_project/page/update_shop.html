@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>商品更新界面</title>
+		<link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+		<style>
+			table{
+				border-spacing: 0;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery.min-2.1.1.js"></script>
+		<script type="text/javascript" src="../layui/layui.js"></script>
+	</head>
+	<body>
+		<div style="margin-left: 70px;margin-top: 20px;">
+			<form class="layui-form" action="">
+				<div class="layui-form-item">
+					<div class="layui-input-inline">
+						<input type="text" name="title" placeholder="商品名称"
+							autocomplete="off" class="layui-input">
+					</div>
+					<div class="layui-input-inline" style="width: 100px;">
+						<button class="layui-btn layui-btn-radius" id="test1">上传图片</button>
+					</div>
+					<div class="layui-input-inline layui-upload-list" style="width: 70px;">
+						<p id="demoText">
+							<span>未上传图片</span>
+						</p>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-input-inline">
+						<input type="text" name="title" placeholder="库存"
+							autocomplete="off" class="layui-input">
+					</div>
+					<div class="layui-input-inline">
+						<input type="text" name="title" placeholder="单价"
+							autocomplete="off" class="layui-input">
+					</div>
+				</div>
+			</form>
+			<div class="b3">
+				<div class="layui-input-block">
+					<button class="layui-btn" onclick="login()" style="width: 390px;margin-left: -110px;">添加</button>	     
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

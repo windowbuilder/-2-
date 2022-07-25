@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>管理员列表界面</title>
+		<link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+		<style>
+			table td{
+				text-align: center;
+			}
+			.layui-table th{
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery.min-2.1.1.js"></script>
+		<script type="text/javascript" src="../layui/layui.js"></script>
+		<script type="text/javascript" src="../js/project.js" ></script>
+	</head>
+	<body>
+		<div style="width: 97%; margin: 20px auto;">
+			<div class="layui-input-inline">
+				<button class="layui-btn" onclick="add()">添加</button>
+			</div>
+			<table class="layui-table" id="tab1" title="管理员表单">
+				<thead>
+					<tr>
+						<th>序号</th>
+						<th>id</th>
+						<th>名称</th>
+						<th>密码</th>
+						<th>权限</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>3</td>
+						<td>张三</td>
+						<td>123456</td>
+						<td>超级管理员</td>
+						<td></td>
+						<td><button type="button" class="layui-btn update">启用</button></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>5</td>
+						<td>李四</td>
+						<td>789456</td>
+						<td>管理员</td>
+						<td>正常</td>
+						<td><button type="button" class="layui-btn update">禁用</button></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>7</td>
+						<td>王五</td>
+						<td>456123</td>
+						<td>管理员</td>
+						<td>禁用</td>
+						<td><button type="button" class="layui-btn update">启用</button></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>7</td>
+						<td>王五</td>
+						<td>456123</td>
+						<td>管理员</td>
+						<td>禁用</td>
+						<td><button type="button" class="layui-btn update">启用</button></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>5</td>
+						<td>李四</td>
+						<td>789456</td>
+						<td>管理员</td>
+						<td>正常</td>
+						<td><button type="button" class="layui-btn update">禁用</button></td>
+					</tr>
+				</tbody>
+			</table>
+			<div style="margin: 0 auto;width: 24%;">
+				<div class="layui-input-inline "><button type="button"
+						class="layui-btn layui-btn-primary layui-border-green" id="first">首页</button></div>
+				<div class="layui-input-inline"><button type="button" class="layui-btn" id="previous">上一页</button></div>
+				<a id="text">第1页，共5页</a>
+				<div class="layui-input-inline"><button type="button" class="layui-btn" id="next">下一页</button></div>
+				<div class="layui-input-inline"><button type="button"
+						class="layui-btn layui-btn-primary layui-border-green" id="last">尾页</button></div>
+			</div>
+		</div>
+	</body>
+	<script>
+		function add(){
+			layer.open({
+				type:2,
+				title:"添加管理员",
+				content:"add_admin.html",
+				area: ['455px', '250px']
+			});
+		}
+	</script>
+</html>

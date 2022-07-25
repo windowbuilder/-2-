@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>商品添加界面</title>
+		<link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+		<style>
+			table{
+				border-spacing: 0;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery.min-2.1.1.js"></script>
+		<script type="text/javascript" src="../layui/layui.js"></script>
+		<script type="text/javascript" src="../js/project.js" ></script>
+	</head>
+	<body>
+		<div style="width: 97%; margin: 20px auto;">
+			<div class="layui-container">
+				<div style="border: 1px solid black;width: 410px;height: 220px;padding-top: 20px;padding-left: 20px;background-color: aliceblue;">
+					<form class="layui-form" action="">
+						<div class="layui-form-item">
+							<div class="layui-input-inline">
+								<input type="text" name="title" placeholder="商品名称"
+									autocomplete="off" class="layui-input">
+							</div>
+							<div class="layui-input-inline" style="width: 100px;">
+								<button class="layui-btn layui-btn-radius" id="test1">上传图片</button>
+							</div>
+							<div class="layui-input-inline layui-upload-list" style="width: 70px;">
+								<p id="demoText">
+									<span>未上传图片</span>
+								</p>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<div class="layui-input-inline">
+								<input type="text" name="title" placeholder="库存"
+									autocomplete="off" class="layui-input">
+							</div>
+							<div class="layui-input-inline">
+								<input type="text" name="title" placeholder="单价"
+									autocomplete="off" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<div class="layui-input-inline">
+								<select name="institute">
+									<option value="">一级分类</option>
+									<option value="1">选项2</option>
+									<option value="2">选项3</option>
+									<option value="3">选项4</option>
+									<option value="4">选项5</option>
+								</select>
+							</div>
+							<div class="layui-input-inline">
+								<select name="institute">
+									<option value="">二级分类</option>
+									<option value="1">选项2</option>
+									<option value="2">选项3</option>
+									<option value="3">选项4</option>
+									<option value="4">选项5</option>
+								</select>
+							</div>
+						</div>
+					</form>
+					<div class="b3">
+						<div class="layui-input-block">
+							<button class="layui-btn" onclick="login()" style="width: 390px;margin-left: -110px;">添加</button>	     
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		layui.use('upload', function(){
+			var $ = layui.jquery,
+			upload = layui.upload;
+	 
+			//普通图片上传
+			var uploadInst = upload.render({
+				elem: '#test1',
+				url: '../img',//改成您自己的上传接口
+				done: function(res){
+					//如果上传失败
+					if(res.code > 0){
+						console.info(res.code);
+						layer.msg('上传失败');
+					}
+					//上传成功
+					layer.msg('上传成功');
+					//将图片的名字放在表单中，添加的时候得放在数据库里面
+					$(function(){
+						$("#fileName").val(res.msg);
+						$("#spa").text()
+						//alert('赋值成功');
+					})
+				}
+				,error: function(){
+					//演示失败状态，并实现重传
+					var demoText = $('#demoText');
+					demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+					demoText.find('.demo-reload').on('click', function(){
+						uploadInst.upload();
+					});
+				}
+			});
+		});
+	</script>
+</html>

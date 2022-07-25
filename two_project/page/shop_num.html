@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>商品分类界面</title>
+		<link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+		<script type="text/javascript" src="../js/jquery.min-2.1.1.js"></script>
+		<script type="text/javascript" src="../layui/layui.js"></script>
+	</head>
+	<body>
+		<div style="width: 97%; margin: 20px auto;">
+			<div id="test1"></div>
+		</div>
+	</body>
+	<script>
+		layui.use('tree', function(){
+			var tree = layui.tree;
+			var inst1 = tree.render({
+				elem: '#test1',
+				data: [{
+					title: '一级分类',
+					children: [{
+						title: '二级分类'
+					}],
+				},{
+					title: '一级分类',
+					children: [{
+						title: '二级分类'
+					}],
+				}],
+			});
+		});
+	</script>
+</html>
